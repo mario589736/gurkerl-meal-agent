@@ -1,6 +1,7 @@
 # Käsespätzle
 
 Portionen: 2
+Aufwand: mittel
 
 ## Zutaten
 

@@ -1,6 +1,7 @@
 # Pasta Aglio e Olio
 
 Portionen: 2
+Aufwand: niedrig
 
 ## Zutaten
 

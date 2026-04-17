@@ -25,6 +25,11 @@ User names the meals they want this week. Example:
 
 Match each name to a file in `meals/`. If no file exists, ask the user for ingredients and offer to create the meal file for next time.
 
+**Auto-plan mode:** If the user says something like "plan my week" or "mach mir einen Wochenplan", the agent can suggest meals automatically:
+- **Weekdays (Mon-Fri):** pick meals tagged `aufwand: niedrig` (quick, easy cooking)
+- **Weekends (Sat-Sun):** pick meals tagged `aufwand: mittel` or `aufwand: hoch` (more complex, fun to cook)
+- Present the plan, let the user swap dishes, then proceed with the shopping list.
+
 ### Step 2: Aggregate Ingredients
 
 - Parse all selected meal files
@@ -69,6 +74,7 @@ Each meal file in `meals/` follows this structure:
 # [Meal Name]
 
 Portionen: [number]
+Aufwand: [niedrig | mittel | hoch]
 
 ## Zutaten
 

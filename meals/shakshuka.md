@@ -1,6 +1,7 @@
 # Shakshuka
 
 Portionen: 2
+Aufwand: niedrig
 
 ## Zutaten
 

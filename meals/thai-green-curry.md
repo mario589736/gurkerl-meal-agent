@@ -1,6 +1,7 @@
 # Thai Green Curry
 
 Portionen: 2
+Aufwand: mittel
 
 ## Zutaten
 

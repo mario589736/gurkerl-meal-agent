@@ -11,12 +11,14 @@ Pick your meals for the week. The agent figures out what to buy.
 
 You tell the agent what you want to eat this week. It diffs, maps to Gurkerl products, and fills your cart.
 
+Each meal has an `Aufwand` tag (niedrig/mittel/hoch). Ask the agent to "plan my week" and it picks easy meals for weekdays, more complex ones for weekends.
+
 ## Setup
 
 ### 1. Clone and configure credentials
 
 ```bash
-git clone https://github.com/YOUR_USER/gurkerl-meal-agent.git
+git clone https://github.com/mario589736/gurkerl-meal-agent.git
 cd gurkerl-meal-agent
 ```
 
@@ -107,6 +109,16 @@ SKILL.md                  — Claude Code skill definition
 CLAUDE.md                 — project instructions
 ```
 
+## Other MCP Clients
+
+The meal files, pantry, and favorites are plain markdown. They work with any MCP client that connects to Gurkerl:
+
+- **Claude Desktop:** Add the config from `.claude/settings.template.json` to your `claude_desktop_config.json` ([setup guide](https://www.gurkerl.at/seite/gurkerl-mcp-server))
+- **ChatGPT with MCP support:** Same server URL and auth headers
+- **Any MCP-compatible client:** The Gurkerl MCP endpoint is `https://mcp.gurkerl.at/mcp/`
+
+The `CLAUDE.md` and `SKILL.md` are optimized for Claude Code, but the data files are universal.
+
 ## Add Your Own Meals
 
 Create a new `.md` file in `meals/`:
@@ -115,6 +127,7 @@ Create a new `.md` file in `meals/`:
 # Dish Name
 
 Portionen: 2
+Aufwand: niedrig | mittel | hoch
 
 ## Zutaten
 

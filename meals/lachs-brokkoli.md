@@ -1,6 +1,7 @@
 # Lachs mit Brokkoli
 
 Portionen: 2
+Aufwand: niedrig
 
 ## Zutaten
 
