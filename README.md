@@ -15,47 +15,52 @@ Each meal has an `Aufwand` tag (niedrig/mittel/hoch). Ask the agent to "plan my 
 
 ## Setup
 
-### 1. Clone and configure credentials
+### 1. Clone and configure the Gurkerl MCP server
 
 ```bash
 git clone https://github.com/mario589736/gurkerl-meal-agent.git
 cd gurkerl-meal-agent
 ```
 
-Copy the MCP settings template and add your Gurkerl credentials:
+Remove any existing Gurkerl MCP config (safe to run even if none exists):
 
 ```bash
-mkdir -p .claude
-cp .claude/settings.template.json .claude/settings.json
+claude mcp remove gurkerl
 ```
 
-Edit `.claude/settings.json` and fill in your Gurkerl email and password:
+Then add the Gurkerl MCP server with your credentials:
 
-```json
-{
-  "mcpServers": {
-    "gurkerl": {
-      "command": "npx",
-      "args": [
-        "mcp-remote",
-        "https://mcp.gurkerl.at/mcp/",
-        "--header",
-        "rhl-email: ${RHL_EMAIL}",
-        "--header",
-        "rhl-pass: ${RHL_PASS}"
-      ],
-      "env": {
-        "RHL_EMAIL": "your-email@example.com",
-        "RHL_PASS": "your-password"
-      }
-    }
-  }
-}
+```bash
+claude mcp add-json gurkerl --scope user '{
+  "type": "stdio",
+  "command": "mcp-remote",
+  "args": [
+    "https://mcp.gurkerl.at/mcp",
+    "--transport", "http-only",
+    "--header", "rhl-email: youremail@example.com",
+    "--header", "rhl-pass: YOUR_PASSWORD"
+  ]
+}'
 ```
 
-> `.claude/settings.json` is gitignored so your credentials stay local.
+Replace `youremail@example.com` and `YOUR_PASSWORD` with your Gurkerl account credentials.
 
-### 2. Customize your kitchen
+> This stores the config in your user-level Claude settings, so it persists across projects and stays out of git.
+
+### 2. Verify the connection
+
+Open Claude Code and test that the MCP connection works:
+
+```
+claude
+> Search Gurkerl for "Milch"
+```
+
+If you get product results back, you're connected. 
+
+> **Troubleshooting:** Don't use the favorites or user info endpoints to test the connection — they return 401/empty on accounts with no order history, which looks like broken auth but isn't. A product search (`batch_search_products`) is the reliable test.
+
+### 3. Customize your kitchen
 
 Edit these files to match your actual setup:
 - `pantry.md` — what's always at home
@@ -63,7 +68,7 @@ Edit these files to match your actual setup:
 - `favorite-products.md` — preferred brands at Gurkerl
 - `meals/*.md` — your standard dishes
 
-### 3. Open Claude Code and pick your meals
+### 4. Open Claude Code and pick your meals
 
 ```bash
 claude
@@ -113,7 +118,7 @@ CLAUDE.md                 — project instructions
 
 The meal files, pantry, and favorites are plain markdown. They work with any MCP client that connects to Gurkerl:
 
-- **Claude Desktop:** Add the config from `.claude/settings.template.json` to your `claude_desktop_config.json` ([setup guide](https://www.gurkerl.at/seite/gurkerl-mcp-server))
+- **Claude Desktop:** Add the Gurkerl MCP server to your `claude_desktop_config.json` ([setup guide](https://www.gurkerl.at/seite/gurkerl-mcp-server))
 - **ChatGPT with MCP support:** Same server URL and auth headers
 - **Any MCP-compatible client:** The Gurkerl MCP endpoint is `https://mcp.gurkerl.at/mcp/`
 
