@@ -62,7 +62,7 @@ If you get product results back, you're connected.
 
 ### 3. Customize your kitchen
 
-The repo ships with example data from another household. Replace it with your own:
+The repo ships with template/placeholder data. Replace it with your own:
 
 - `pantry.md` — what's always at home (the agent skips these when building the shopping list)
 - `weekly-staples.md` — what you order every week regardless of meals
