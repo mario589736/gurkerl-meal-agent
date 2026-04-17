@@ -2,44 +2,29 @@
 
 Sachen die immer zu Hause sind. Werden nie bestellt.
 
-## Öle & Fette
-- Olivenöl
-- Butter
-- Kokosöl
+> **Passe diese Liste an deinen Haushalt an.** Der Agent fragt dich beim ersten Setup, was du immer daheim hast.
 
-## Gewürze & Basics
+## Oele & Fette
+- Olivenoel
+- Butter
+
+## Gewuerze & Basics
 - Salz
 - Pfeffer
 - Paprikapulver
-- Kreuzkümmel
-- Kurkuma
-- Chiliflocken
-- Oregano
-- Knoblauchpulver
-- Zimt
-- Muskatnuss
 - Sojasauce
-- Fischsauce
-- Sesamöl
 
 ## Trockenwaren
-- Reis (Basmati)
-- Pasta (Spaghetti, Penne)
+- Reis
+- Pasta
 - Mehl
 - Zucker
-- Haferflocken
-- Linsen (rote)
-- Kokosmilch (Dose)
-- Bulgur
 
-## Grundgemüse (immer da)
+## Grundgemuese (immer da)
 - Zwiebeln
 - Knoblauch
 
 ## Sonstiges
-- Essig (Balsamico, Apfelessig)
+- Essig
 - Senf
-- Honig
-- Tomatenmark
-- Stückige Tomaten (Dose)
-- Gemüsebrühe
+- Gemuesebruehe
