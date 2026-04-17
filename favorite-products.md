@@ -9,9 +9,10 @@ Bevorzugte Marken und Varianten. Agent soll diese bei der Gurkerl Suche bevorzug
 | Joghurt griechisch | nöm Joghurt griechische Art 10% | 200g | |
 | Joghurt natur | Kärntnermilch BIO Wiesenmilch Joghurt 3,6% | 200g | BIO |
 | Butter | Pinzgau Milch Bergbauern Butter | 250g | |
-| Topfen 20% | Miil Topfen 20% | 250g | Miil, Stammkauf |
-| Topfen 40% | Miil Topfen 40% | 250g | Miil |
-| Magertopfen | Miil Magertopfen | 250g | Miil |
+| Topfen 20% | Miil Topfen 20% | 250g | Miil, Stammkauf. Fallback: Ländle Speisetopfen, oder Mix aus 40%+Magertopfen |
+| Topfen 40% | Miil Topfen 40% | 250g | Miil. Kann mit Magertopfen gemischt werden für ~20% |
+| Magertopfen | Miil Magertopfen | 250g | Miil. Kann mit 40% gemischt werden für ~20% |
+| Topfen Fallback | Ländle Speisetopfen | 250g | Fallback wenn alle Miil Topfen out of stock |
 | Obers/Sahne | Miil Obers zum Kochen 10% | 180ml | Stammkauf |
 | Joghurt natur groß | Miil BIO Joghurt Natur 3,8% | 400g | BIO, Stammkauf |
 | Skyr | Alnatura BIO Skyr | 400g | BIO |
@@ -22,8 +23,8 @@ Bevorzugte Marken und Varianten. Agent soll diese bei der Gurkerl Suche bevorzug
 | Parmigiano Reggiano | Miil Parmigiano Reggiano DOP 24 Monate gereift | 200g | Miil |
 | Eier | Nest Ei Eier aus Freilandhaltung M 10er | 10 Stk | Freiland |
 | Milch | Kärntnermilch BIO Wiesenmilch Vollmilch 3,5% ESL | 1 l | BIO |
-| Haferdrink | Oatly Haferdrink Barista Edition | 1 l | |
-| Mandeldrink | Yutto BIO Mandeldrink ungesüßt | 1 l | BIO |
+| Haferdrink | Oatly Haferdrink Barista Edition | 1 l | Nur für Kaffee |
+| Mandeldrink | Yutto BIO Mandeldrink ungesüßt | 1 l | BIO, Default für Kochen/Müsli |
 
 ## Obst & Gemüse
 
@@ -37,7 +38,8 @@ Bevorzugte Marken und Varianten. Agent soll diese bei der Gurkerl Suche bevorzug
 | Snacktomaten | Bunte Snacktomaten | 200g | |
 | Cocktailtomaten | Cocktailtomaten an der Rispe, lose | lose | |
 | Datteltomaten | Datteltomaten gelb | 250g | |
-| Spinat | BIO Baby Spinat | 100g | BIO |
+| Spinat (Salat/roh) | BIO Baby Spinat | 100g | BIO, nur für Salate |
+| Spinat (kochen) | Alnatura BIO Blattspinat (tiefgekühlt) | 450g | BIO, TK, Default zum Kochen |
 | Lauch/Porree | BIO Porree, 1 Stk. | 1 Stk | BIO |
 | Champignons | BIO Champignon creme | 200g | BIO, Stammkauf |
 | Suppengrün | BIO Suppengrün | 350g | BIO |
@@ -95,16 +97,18 @@ Bevorzugte Marken und Varianten. Agent soll diese bei der Gurkerl Suche bevorzug
 | Tahini | Doyal Sesampaste (Tahini) | 300g | |
 | Kokosmilch | Roi Thai Kokosmilch | 250ml | |
 | Kaffirlimettenblätter | Cock Brand Getrocknete Kaffirlimettenblätter | 10g | |
-| Koriander | Altschachl Koriander | 20g | |
-| Basilikum | Altschachl Basilikum | 20g | |
-| Spaghetti | Garofalo Spaghetti | 500g | |
-| Spaghetti Budget | Kitchin Spaghetti #No.5 | 500g | |
-| Linguine | Kitchin Linguine #No.13 | 500g | |
-| Farfalle | Kitchin Farfalle #No.154 | 500g | |
+| Koriander (frisch/Garnish) | Altschachl Koriander | 20g | Nur wenn roh/als Garnish |
+| Koriander (kochen) | Iglo Koriander (tiefgekühlt) | 40g | TK, Default zum Kochen |
+| Basilikum (frisch/Garnish) | Altschachl Basilikum | 20g | Nur wenn roh/als Garnish |
+| Basilikum (kochen) | Iglo Basilikum (tiefgekühlt) | 50g | TK, Default zum Kochen |
+| Spaghetti Premium | Garofalo Spaghetti | 500g | Nur für pastafokussierte Gerichte (Aglio e Olio etc.) |
+| Spaghetti | Kitchin Spaghetti #No.5 | 500g | Standard/Default |
+| Linguine | Kitchin Linguine #No.13 | 500g | Standard/Default |
+| Farfalle | Kitchin Farfalle #No.154 | 500g | Standard/Default |
 | Hörnchen | Recheis Goldmarke Hörnchen | 500g | |
-| Gnocchi | Rana Gnocchi di Patate | 400g | |
+| Gnocchi | Rana Gnocchi di Patate | 400g | Premium (€15.95/kg) |
 | Schupfnudeln | Henglein Schupfnudeln | 500g | |
-| Maultaschen | Bürger Maultaschen traditionell schwäbisch | 360g | |
+| Maultaschen | Bürger Maultaschen traditionell schwäbisch | 360g | Premium (€17.72/kg) |
 | Roggenmehl | Wiener Gusto BIO Roggenmehl Type 960 | 1 kg | BIO |
 | Weizenmehl | Wiener Gusto BIO Weizenmehl glatt Type 700 | 1 kg | BIO |
 | Erdnusscreme | Yutto Erdnusscreme Smooth 100% Erdnüsse | 350g | |

@@ -10,6 +10,35 @@ When searching and selecting products, follow these rules in order:
 3. Fall back to `favorite-products.md` for specific brand preferences per ingredient
 4. If none of the above match, pick the most common/popular option and confirm with the user
 
+### Out-of-stock fallbacks
+
+When a preferred product is unavailable, check `favorite-products.md` for documented fallbacks before asking the user. Key fallback strategies:
+
+- **Topfen:** If Miil Topfen 20% is out of stock, try these in order:
+  1. Mix: 2x Miil Topfen 40% + 2x Miil Magertopfen (user mixes them to get ~20%)
+  2. Ländle Speisetopfen (reliable fallback, usually in stock)
+  3. Ask the user
+- **General rule:** If the first-choice product is unavailable, check if `favorite-products.md` lists a "Fallback" entry for that ingredient before suggesting random alternatives.
+
+### Smart quantity & variety rules
+
+When ordering multiple units of the same ingredient category, don't just multiply the same small product. Think about value and variety:
+
+- **Tomatoes:** Don't order 4x small Cocktailtomaten (expensive per kg). Instead mix sizes: e.g. 2x Rispenparadeiser (500g, bulk/cooking) + 1x Mini San Marzano or Snacktomaten (variety/snacking). Better value, more variety.
+- **General principle:** When a recipe or staple list requires 3+ units of the same produce category, check if there's a larger pack or a mix of varieties that gives better value per kg. Small premium packs (Cherry, Cocktail, Snack) are fine as 1x for variety, but shouldn't be the bulk buy.
+- **Per-kg price awareness:** If ordering 3+ of the same item, compare the per-kg price. Flag to the user if there's a significantly cheaper alternative that serves the same purpose.
+
+### Cost optimization rules
+
+Apply these by default unless a recipe specifically requires the premium version:
+
+- **Pasta:** Default to Kitchin Eigenmarke (€0.62/500g) for everyday cooking. Only use Garofalo/Recheis when the dish is pasta-focused (e.g. Aglio e Olio) where pasta quality matters.
+- **Spinat for cooking:** Use TK Blattspinat (Alnatura BIO, €3.49/450g = €7.76/kg) instead of fresh BIO Baby Spinat (€2.09/100g = €20.90/kg). Fresh Baby Spinat only for salads where it's eaten raw.
+- **Herbs for cooking:** Use TK herbs (Iglo, 40g ~€2.09) instead of fresh Altschachl (20g €2.29). Fresh herbs only when used as garnish/raw (e.g. fresh Basilikum on pasta, fresh Koriander on curry).
+- **Oatly Barista:** Only for coffee. For cooking/cereal, suggest Yutto BIO Mandeldrink (half the price).
+- **Convenience products:** Flag items over €15/kg (Rana Gnocchi, Bürger Maultaschen) — don't block them, but the user should be aware.
+- **Snacks:** Don't optimize here — lifestyle choice, not a cost target.
+
 ## How It Works
 
 1. User picks dishes from `meals/` (each meal is an .md file with ingredients)

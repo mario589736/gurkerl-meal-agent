@@ -30,9 +30,16 @@ Sachen die immer zu Hause sind. Werden nie bestellt.
 - Haferflocken
 - Linsen (rote)
 - Kokosmilch (Dose)
+- Bulgur
+
+## Grundgemüse (immer da)
+- Zwiebeln
+- Knoblauch
 
 ## Sonstiges
 - Essig (Balsamico, Apfelessig)
 - Senf
 - Honig
 - Tomatenmark
+- Stückige Tomaten (Dose)
+- Gemüsebrühe
