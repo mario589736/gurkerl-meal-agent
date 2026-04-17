@@ -1,0 +1,8 @@
+# Claude Code settings (contains Gurkerl credentials)
+.claude/settings.json
+
+# OS
+.DS_Store
+
+# Node (for npx mcp-remote)
+node_modules/

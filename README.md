@@ -1,0 +1,131 @@
+# Gurkerl Meal Agent
+
+Pick your meals for the week. The agent figures out what to buy.
+
+## How it works
+
+1. You have a folder of your standard dishes (`meals/`) with ingredients
+2. You have a pantry list (`pantry.md`) of stuff that's always at home
+3. You have weekly staples (`weekly-staples.md`) that get ordered every time
+4. You have favorite Gurkerl products (`favorite-products.md`) so the agent picks the right brands
+
+You tell the agent what you want to eat this week. It diffs, maps to Gurkerl products, and fills your cart.
+
+## Setup
+
+### 1. Clone and configure credentials
+
+```bash
+git clone https://github.com/YOUR_USER/gurkerl-meal-agent.git
+cd gurkerl-meal-agent
+```
+
+Copy the MCP settings template and add your Gurkerl credentials:
+
+```bash
+mkdir -p .claude
+cp .claude/settings.template.json .claude/settings.json
+```
+
+Edit `.claude/settings.json` and fill in your Gurkerl email and password:
+
+```json
+{
+  "mcpServers": {
+    "gurkerl": {
+      "command": "npx",
+      "args": [
+        "mcp-remote",
+        "https://mcp.gurkerl.at/mcp/",
+        "--header",
+        "rhl-email: ${RHL_EMAIL}",
+        "--header",
+        "rhl-pass: ${RHL_PASS}"
+      ],
+      "env": {
+        "RHL_EMAIL": "your-email@example.com",
+        "RHL_PASS": "your-password"
+      }
+    }
+  }
+}
+```
+
+> `.claude/settings.json` is gitignored so your credentials stay local.
+
+### 2. Customize your kitchen
+
+Edit these files to match your actual setup:
+- `pantry.md` — what's always at home
+- `weekly-staples.md` — what you order every week
+- `favorite-products.md` — preferred brands at Gurkerl
+- `meals/*.md` — your standard dishes
+
+### 3. Open Claude Code and pick your meals
+
+```bash
+claude
+> Diese Woche: Käsespätzle und Thai Green Curry
+```
+
+## Example
+
+```
+> Diese Woche: Käsespätzle und Thai Green Curry
+
+Checking meals... subtracting pantry... adding weekly staples...
+
+Einkaufsliste:
+- 300g Bergkäse (Ländle Bergkäse) ← Favorit
+- 3 Zwiebeln
+- 1 Bund Schnittlauch
+- 200g Tofu (Ja! Natürlich Tofu Natur) ← Favorit
+- 1 Brokkoli
+- 1 Paprika rot
+- 100g Zuckerschoten
+- 1 Bund Thai-Basilikum
+- 2 Kaffirlimettenblätter
+- 1 Limette
+- Grüne Currypaste
++ Weekly Staples: Hafermilch, Bananen, Brot, Joghurt, Eier...
+
+Soll ich das in den Gurkerl Warenkorb legen?
+```
+
+## File Structure
+
+```
+meals/                    — one file per dish
+  kaesespaetzle.md
+  thai-green-curry.md
+  shakshuka.md
+  ...
+pantry.md                 — always at home, never order
+weekly-staples.md         — order every week
+favorite-products.md      — preferred brands at Gurkerl
+SKILL.md                  — Claude Code skill definition
+CLAUDE.md                 — project instructions
+```
+
+## Add Your Own Meals
+
+Create a new `.md` file in `meals/`:
+
+```markdown
+# Dish Name
+
+Portionen: 2
+
+## Zutaten
+
+- 200g Ingredient
+- 1 Other Ingredient
+
+## Notizen (optional)
+
+Prep tips.
+```
+
+## License
+
+MIT
