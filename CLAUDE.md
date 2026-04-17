@@ -53,6 +53,17 @@ SKILL.md         — the Claude Code skill definition
 .claude/settings.json — MCP config with real credentials (gitignored)
 ```
 
+## Adding New Meals
+
+Users can add meals by sharing a recipe URL or pasting ingredients. The agent:
+
+1. Fetches/parses the recipe (name, ingredients, quantities)
+2. Auto-classifies effort (niedrig/mittel/hoch) based on ingredient count, cooking time, complexity
+3. Asks the user to confirm the classification
+4. Saves as a new `.md` file in `meals/`
+
+This means the meal library grows naturally over time. See SKILL.md for the full classification criteria.
+
 ## Usage
 
 Once setup is complete:

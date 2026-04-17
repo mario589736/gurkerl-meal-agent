@@ -57,6 +57,45 @@ Match each name to a file in `meals/`. If no file exists, ask the user for ingre
 - Show a summary: what was added, total item count
 - User reviews in Gurkerl app/website and completes the order
 
+## Adding New Meals (Recipe Import)
+
+The user can add new meals in three ways:
+
+### From a URL
+
+User shares a recipe link (e.g. from a food blog, chefkoch.de, etc.):
+
+1. Fetch the URL and extract: dish name, ingredients with quantities, prep steps
+2. Classify the effort level automatically based on these criteria:
+   - **niedrig:** max 5 ingredients, max 20 min active cooking, one-pot/one-pan, no special techniques
+   - **mittel:** 6-10 ingredients, 20-45 min active cooking, multiple steps but straightforward
+   - **hoch:** 10+ ingredients, 45+ min active cooking, multiple components, special techniques (dough making, slow braising, etc.)
+3. Present the parsed result to the user for confirmation
+4. Save as a new `.md` file in `meals/` using the standard format
+5. Confirm the Aufwand classification with the user ("Ich würde das als mittel einstufen, passt das?")
+
+### From pasted text
+
+User pastes ingredients or a full recipe directly into the chat. Same flow: parse, classify effort, confirm, save.
+
+### Manual
+
+User just names a dish and lists ingredients. Agent creates the file.
+
+### Effort Classification Rules
+
+When classifying Aufwand, consider:
+
+| Factor | niedrig | mittel | hoch |
+|---|---|---|---|
+| Ingredients | max 5 | 6-10 | 10+ |
+| Active cooking time | max 20 min | 20-45 min | 45+ min |
+| Steps | 1-3 | 4-6 | 7+ |
+| Techniques | basic (boil, fry, bake) | moderate (sauce making, marinating) | advanced (dough, braising, multi-component) |
+| Parallel tasks | none | some | requires timing multiple things |
+
+If in doubt, round up. Better to be pleasantly surprised than stressed on a Tuesday.
+
 ## Rules
 
 - Never order pantry items. The whole point is to avoid buying what's already there.

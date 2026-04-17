@@ -121,7 +121,11 @@ The `CLAUDE.md` and `SKILL.md` are optimized for Claude Code, but the data files
 
 ## Add Your Own Meals
 
-Create a new `.md` file in `meals/`:
+**From a URL:** Paste a recipe link (chefkoch.de, food blogs, etc.) and the agent extracts ingredients, creates the meal file, and auto-classifies effort level.
+
+**From text:** Paste ingredients or describe the dish. The agent parses and saves it.
+
+**Manually:** Create a new `.md` file in `meals/`:
 
 ```markdown
 # Dish Name
@@ -138,6 +142,8 @@ Aufwand: niedrig | mittel | hoch
 
 Prep tips.
 ```
+
+Effort levels: **niedrig** (max 5 ingredients, 20 min, one-pot), **mittel** (6-10 ingredients, 20-45 min), **hoch** (10+ ingredients, 45+ min, multi-component).
 
 ## License
 
