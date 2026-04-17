@@ -62,11 +62,14 @@ If you get product results back, you're connected.
 
 ### 3. Customize your kitchen
 
-Edit these files to match your actual setup:
-- `pantry.md` — what's always at home
-- `weekly-staples.md` — what you order every week
-- `favorite-products.md` — preferred brands at Gurkerl
-- `meals/*.md` — your standard dishes
+The repo ships with example data from another household. Replace it with your own:
+
+- `pantry.md` — what's always at home (the agent skips these when building the shopping list)
+- `weekly-staples.md` — what you order every week regardless of meals
+- `favorite-products.md` — preferred brands at Gurkerl (the agent uses this to pick the right products)
+- `meals/*.md` — your standard dishes (keep the examples as inspiration or delete them)
+
+> **Tip:** Just open Claude Code and start chatting — the agent will detect the example data and walk you through replacing it with your actual kitchen setup. It can also pull your order history from Gurkerl to bootstrap your favorites.
 
 ### 4. Open Claude Code and pick your meals
 

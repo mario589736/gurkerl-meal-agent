@@ -24,12 +24,24 @@ When a new user opens this project for the first time, walk them through this on
 
 ### Step 1: Configure Gurkerl MCP
 
-Check if `.claude/settings.json` exists with real credentials (not placeholder values).
+Check if the Gurkerl MCP server is already connected by trying a product search.
 
-If not configured yet:
-1. Tell the user to copy the template: `cp .claude/settings.template.json .claude/settings.json`
-2. Ask them to fill in their Gurkerl email and password in `.claude/settings.json`
-3. Tell them to restart Claude Code so the MCP server connects
+If not configured yet, tell the user to run:
+
+```bash
+claude mcp add-json gurkerl --scope user '{
+  "type": "stdio",
+  "command": "mcp-remote",
+  "args": [
+    "https://mcp.gurkerl.at/mcp",
+    "--transport", "http-only",
+    "--header", "rhl-email: youremail@example.com",
+    "--header", "rhl-pass: YOUR_PASSWORD"
+  ]
+}'
+```
+
+They need to replace the email and password with their Gurkerl credentials, then restart Claude Code.
 
 ### Verifying the MCP Connection
 
@@ -47,21 +59,24 @@ Summary of endpoint reliability for connection testing:
 
 ### Step 2: Pull Favorite Products from Gurkerl
 
-Once the MCP connection is verified (via product search), help the user bootstrap their `favorite-products.md`:
+The repo ships with example data in `favorite-products.md` from another user's order history. **New users must replace this with their own favorites.**
 
-1. Try `get_all_user_favorites` and `fetch_orders` to pull order history / favorites
-2. If data is available: present the most frequently ordered items, ask the user to confirm which are true favorites (recurring buys vs. one-time purchases)
-3. If endpoints return empty/401 (common for new accounts): skip auto-population and either ask the user to list their preferred products manually, or search Gurkerl for common staples and let them pick
-4. Update `favorite-products.md` with confirmed favorites, including the exact Gurkerl product name so future searches match perfectly
+1. Check if `favorite-products.md` still contains the example/dummy data (look for brands like Miil Topfen, Garofalo Spaghetti, etc. that aren't the user's own). If it does, tell the user this is example data and offer to replace it.
+2. Try `get_all_user_favorites` and `fetch_orders` to pull the user's order history / favorites
+3. If data is available: present the most frequently ordered items, ask the user to confirm which are true favorites (recurring buys vs. one-time purchases)
+4. If endpoints return empty/401 (common for new accounts): skip auto-population and either ask the user to list their preferred products manually, or search Gurkerl for common staples and let them pick
+5. Replace `favorite-products.md` with confirmed favorites, including the exact Gurkerl product name so future searches match perfectly
 
 This step is important because the agent relies on `favorite-products.md` to pick the right brand/variant when ordering. Without it, the agent has to guess or ask every time.
 
 ### Step 3: Customize Kitchen Files
 
+The repo ships with example data in `pantry.md`, `weekly-staples.md`, and `meals/`. **New users should review and replace these with their own.**
+
 Walk the user through:
-1. `pantry.md` — review the defaults, remove what they don't have, add what's missing
-2. `weekly-staples.md` — adjust to their actual recurring order
-3. `meals/` — add their standard dishes (use existing meals as format reference)
+1. `pantry.md` — check if it still has the example data. Ask the user what they actually have at home (oils, spices, grains, etc.) and update accordingly
+2. `weekly-staples.md` — check if it still has example data. Ask the user what they order every week regardless of meals, or pull from their order history if available
+3. `meals/` — the example meals can stay as inspiration, but encourage adding their own standard dishes (use existing meals as format reference)
 
 ## Directory Structure
 
