@@ -2,26 +2,44 @@
 
 Sachen die immer zu Hause sind. Werden nie bestellt.
 
-## Oele & Fette
-- Olivenoel
+## Öle & Fette
+- Olivenöl
 - Butter
+- Kokosöl
 
-## Gewuerze & Basics
+## Gewürze & Basics
 - Salz
 - Pfeffer
 - Paprikapulver
+- Kreuzkümmel
+- Kurkuma
+- Chiliflocken
+- Oregano
+- Knoblauchpulver
+- Zimt
+- Muskatnuss
 - Sojasauce
+- Fischsauce
+- Sesamöl
 
 ## Trockenwaren
-- Reis
+- Reis (Basmati)
+- Pasta (Spaghetti, Penne)
 - Mehl
 - Zucker
+- Haferflocken
+- Linsen (rote)
+- Kokosmilch (Dose)
+- Bulgur
 
-## Grundgemuese (immer da)
+## Grundgemüse (immer da)
 - Zwiebeln
 - Knoblauch
 
 ## Sonstiges
-- Essig
+- Essig (Balsamico, Apfelessig)
 - Senf
-- Gemuesebruehe
+- Honig
+- Tomatenmark
+- Stückige Tomaten (Dose)
+- Gemüsebrühe
