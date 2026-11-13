@@ -2,8 +2,6 @@
 
 Sachen die immer zu Hause sind. Werden nie bestellt.
 
-> **Passe diese Liste an deinen Haushalt an.** Der Agent fragt dich beim ersten Setup, was du immer daheim hast.
-
 ## Oele & Fette
 - Olivenoel
 - Butter
@@ -16,7 +14,6 @@ Sachen die immer zu Hause sind. Werden nie bestellt.
 
 ## Trockenwaren
 - Reis
-- Pasta
 - Mehl
 - Zucker
 

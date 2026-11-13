@@ -2,6 +2,13 @@
 
 A Claude Code skill that turns your weekly meal picks into a Gurkerl shopping cart. No app, no overhead. Just pick your dishes, the agent handles the rest.
 
+## Haushalt & Ernährung
+
+- Haushalt: 2 Erwachsene und 1 Kind. Rezeptmengen auf ca. 2,5 Portionen umrechnen (Kind = halbe Portion), Stückzutaten sinnvoll aufrunden.
+- Ernährung: meist vegetarisch, ab und zu Fleisch oder Fisch. Pro Woche höchstens 1 bis 2 Gerichte mit Fleisch/Fisch.
+- Allergien, Unverträglichkeiten, No-Gos: keine bekannt (Stand 13.11.2026).
+- Fürs Kind: Schärfe (Chili, Cayenne, Pfefferoni) nur optional bzw. am Tisch nachwürzen.
+
 ## Product Preferences
 
 When searching and selecting products, follow these rules in order:
