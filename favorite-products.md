@@ -20,6 +20,8 @@ Bevorzugte Marken und Varianten. Agent soll diese bei der Gurkerl Suche bevorzug
 | Crème Fraîche | Schärdinger Creme Fraiche Natur | 125g | |
 | Frischkäse | Miil Frischkäse | 200g | Miil. Woerle BIO Frischkäse natur bevorzugen, falls bei Gurkerl verfügbar (Stand Nov 2026: nur Kräuter-Variante) |
 | Mozzarella | Schärdinger Mozzarella 45% | 125g | |
+| Feta | Miil BIO Feta | 180g | Miil, BIO, ca. 2,25 € |
+| Gouda gerieben | Miil Gouda gerieben | 200g | Miil, ca. 1,43 € |
 | Grana Padano | Miil Grana Padano DOP 16 Monate gereift | 200g | Miil |
 | Parmigiano Reggiano | Miil Parmigiano Reggiano DOP 24 Monate gereift | 200g | Miil |
 | Eier | Nest Ei Eier aus Freilandhaltung M 10er | 10 Stk | Freiland |
@@ -35,7 +37,7 @@ Bevorzugte Marken und Varianten. Agent soll diese bei der Gurkerl Suche bevorzug
 | Orangen | BIO Orangen, lose | lose | BIO |
 | Limetten | BIO Limette, lose | lose | BIO |
 | Birnen | Birne Abate | lose | |
-| Cherrytomaten | BIO Cherrytomaten | 250g | BIO |
+| Cherrytomaten | Cherrytomaten an der Rispe | 500g | Default, ca. 2,29 € (pro kg günstiger als BIO). Fallback: BIO Cherrytomaten 250g |
 | Snacktomaten | Bunte Snacktomaten | 200g | |
 | Cocktailtomaten | Cocktailtomaten an der Rispe, lose | lose | |
 | Datteltomaten | Datteltomaten gelb | 250g | |
@@ -48,13 +50,14 @@ Bevorzugte Marken und Varianten. Agent soll diese bei der Gurkerl Suche bevorzug
 | Knoblauch | Knoblauch, lose | ~70g | |
 | Erdäpfel mehlig | Kraftladen's BIO Erdäpfel mehligkochend im Netz | 2 kg | BIO |
 | Erdäpfel festkochend | Niedermayer's BIO-Erdäpfel, festkochend | 1 kg | BIO |
-| Paprika rot | Paprika rot | lose | |
+| Paprika rot | BIO Paprika rot | 1 Stk (ca. 160g) | BIO, ca. 1,01 €. Fallback: Paprika rot, lose |
 | Brokkoli | Brokkoli | 500g | |
+| Karotten | BIO Karotten | 1 kg | BIO, ca. 1,79 € |
 | Karfiol | BIO Karfiol | 1 Stk | BIO |
 | Avocado | BIO Avocado Hass, ready to eat | 1 Stk | BIO |
 | Jungzwiebeln | Jungzwiebeln per Bund | 1 Bund | |
 | Zwiebel | Kraftladen's BIO Zwiebel Gelb im Netz | 1 kg | BIO |
-| Romanasalat | Romanasalat | 1 Stk | |
+| Romanasalat/Blattsalat | Mini Romanasalat | 2 Stk | ca. 1,99 €. Fallback: Romanasalat, 1 Stk |
 | Pimientos de Padrón | Pimientos de Padrón | 200g | |
 | Zuckermais (Kolben) | BIO Zuckermais vorgegart | 400g | BIO. Ganze Kolben, nur wenn Kolben gewünscht |
 | Mais (Körner, Dose) | Alnatura BIO Mais | 340g | BIO. Default wenn Rezept "Dose Mais" sagt |
@@ -84,7 +87,7 @@ Bevorzugte Marken und Varianten. Agent soll diese bei der Gurkerl Suche bevorzug
 |---|---|---|---|
 | Oliven | Alnatura BIO Kalamata Oliven o. Stein | 350g | BIO |
 | Käferbohnen | Steirerkraft Käferbohnen g.U. | 400g | |
-| Kichererbsen | Morgentau BIO Kichererbsen, gegart | 350g | BIO, Stammkauf |
+| Kichererbsen | Morgentau BIO Kichererbsen, gegart | 350g | BIO, Stammkauf, ca. 2,79 €. Fallback: Kitchin Kichererbsen 420g (ca. 0,55 €) |
 | Kidney Bohnen | Alnatura BIO Kidney Bohnen | 400g | BIO, Default (günstiger als Morgentau 350g) |
 | Weiße Bohnen | Alnatura BIO Weiße Bohnen | 400g | BIO, Default (günstiger als Morgentau 350g) |
 | Linsen | Morgentau BIO Linsen, gegart | 350g | BIO |
@@ -135,6 +138,7 @@ Bevorzugte Marken und Varianten. Agent soll diese bei der Gurkerl Suche bevorzug
 | Zutat | Gurkerl Produkt | Menge | Notiz |
 |---|---|---|---|
 | Erbsen | followfood BIO Junge-Erbsen (tiefgekühlt) | 300g | BIO |
+| Brokkoli (TK) | Alnatura BIO Brokkoli (tiefgekühlt) | 300g | BIO, TK, ca. 3,50 €. Fallback (günstiger): Iglo Broccoli 600g (ca. 3,99 €) |
 | Heidelbeeren | Alnatura BIO Heidelbeeren (tiefgekühlt) | 300g | BIO |
 | Buttergemüse | Alnatura BIO Buttergemüse (tiefgekühlt) | 300g | BIO |
 | Schnittlauch | Iglo Schnittlauch (tiefgekühlt) | 40g | |
