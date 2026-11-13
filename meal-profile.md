@@ -10,6 +10,7 @@ Standard-Portionen: 6
 - Gerichte ohne Healthy-Flag nicht vorschlagen oder einplanen. Sie bleiben nur manuell auswählbar, wenn Mario sie ausdrücklich nennt.
 - Unter der Woche wird nur abends gekocht.
 - Jedes Abendessen ergibt ca. 6 Portionen: Familienabendessen plus Mittagessen für Mario und Anka am Folgetag.
+- Ausnahme Brotzeit: immer für 4 Personen planen (`meals/brotzeit.md`). Alle anderen Gerichte immer für 6 Portionen planen, damit Mario und Anka am Folgetag Reste zum Mittagessen mitnehmen können. Rezepte mit anderer Portionszahl entsprechend umrechnen, Stückzutaten sinnvoll aufrunden.
 - Mittagessen im Wochenplan immer als `Reste von [Vorabend]` ausweisen. Keine eigenen Mittagsrezepte und kein Kochen am Mittag einplanen.
 - Reste direkt beim Abräumen in zwei flache, verschließbare Lunchboxen portionieren und kühlen.
 - Reisreste besonders schnell kühlen, innerhalb von 24 Stunden essen und nur einmal vollständig durcherhitzen.

@@ -1,16 +1,16 @@
 # Brotzeit
 
-Portionen: 2
+Portionen: 4
 Aufwand: niedrig
 
 ## Zutaten
 
-- 2 Tomaten
-- 1 Bund Radieschen
-- 1 Paprika rot
-- 200g Frischkäse
-- Brot
+- 4 Tomaten
+- 2 Bund Radieschen
+- 2 Paprika rot
+- 400g Frischkäse
+- 1 Laib Vollkornbrot (ca. 500g)
 
 ## Notizen
 
-Kalte Jause, kein Kochen nötig.
+Kalte Jause, kein Kochen nötig. Immer für 4 Personen planen (siehe meal-profile.md).

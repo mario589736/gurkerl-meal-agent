@@ -1,32 +1,30 @@
-# Aktueller Wochenplan: 2. bis 8. November 2026
+# Aktueller Wochenplan: 16. bis 22. November 2026
 
 Modus: healthy
-Status: geplant
-
-Frühstück ist bereits eingerichtet. Montag Mittag ist bereits geplant und wird hier nicht verändert.
+Status: bestätigt, Warenkorb vorbereitet
 
 | Tag | Mittag | Abendessen |
 |---|---|---|
-| Montag | (bestehend) | Brotzeit (auf Wunsch, nicht Healthy-getaggt) |
-| Dienstag | Hummus, Gemüsesticks, Vollkornbrot (kalt, kein Kochen) | Healthy Pasta mit roter Linsen-Tomatensauce |
-| Mittwoch | Reste der Linsenpasta | Healthy Bohnen-Käse-Wraps (5 Portionen / 6 große Wraps) |
-| Donnerstag | Reste der Bohnen-Käse-Wraps | Healthy Gemüse-Linsen-Eintopf mit Vollkornbrot |
-| Freitag | Reste des Linsen-Eintopfs | Healthy Shakshuka mit weißen Bohnen und Vollkornbrot |
-| Samstag | Reste der Shakshuka (Sauce erhitzen, Eier frisch stocken) | Ragù alla Bolognese mit Linguine (auf Wunsch, nicht Healthy-getaggt, 3,5 Std, doppelte Menge) |
+| Montag | (bestehend) | Brotzeit (4 Personen) |
+| Dienstag | frei (Brotzeit ergibt keine Reste) | Healthy Pasta mit roter Linsen-Tomatensauce |
+| Mittwoch | Reste von Linsenpasta | Healthy Ofen-Frittata mit Brokkoli und Paprika |
+| Donnerstag | Reste von Ofen-Frittata | Healthy Ofenkartoffeln mit Kräutertopfen und Erbsen |
+| Freitag | Reste von Ofenkartoffeln | Healthy Blechgemüse mit Kichererbsen, Feta und Bulgur |
+| Samstag | Reste von Blechgemüse | frei |
 | Sonntag | frei | frei |
 
 ## Gerichte für den Gurkerl-Einkauf
 
-- `meals/brotzeit.md` (für 3 Personen skalieren)
-- Dienstag Mittag: Hummus, Karotten, Paprika, Gurke, Vollkornbrot
-- `meals/healthy-rote-linsen-pasta.md`
-- `meals/healthy-bohnen-kaese-wraps.md`
-- `meals/healthy-gemuese-linsen-eintopf.md`
-- `meals/healthy-shakshuka-weisse-bohnen.md`
-- `meals/ragu-alla-bolognese.md` (doppelte Menge = 8 Portionen, Linguine statt Tagliatelle; Rest der Sauce einfrieren)
+- `meals/brotzeit.md` (4 Personen)
+- `meals/healthy-rote-linsen-pasta.md` (6 Portionen)
+- `meals/healthy-ofen-frittata.md` (6 Portionen)
+- `meals/healthy-ofenkartoffeln-kraeutertopfen.md` (6 Portionen)
+- `meals/healthy-blechgemuese-kichererbsen-feta.md` (6 Portionen)
 
 ## Hinweise
 
-- Rote Linsen: Pasta (300g) und Eintopf (400g) brauchen zusammen 700g aus dem Vorrat.
-- Vollkornbrot wird Montag, Dienstag, Donnerstag und Freitag gebraucht: zwei Laibe, einen davon einfrieren oder erst später liefern lassen.
-- Kichererbsen-Kokos-Curry und Vollkorn-Pita-Pizzas kamen nicht gut an und werden nicht mehr automatisch eingeplant.
+- Pasta (600g), rote Linsen (300g) und Bulgur (400g) kommen aus dem Vorrat.
+- Radieschen waren bei Gurkerl am 13.11. ausverkauft (wieder ab ca. 15.11.).
+- Mini San Marzano ausverkauft, ersetzt durch Cherrytomaten an der Rispe (500g), die auch fürs Blechgemüse reichen.
+- Rote Zwiebeln fürs Blechgemüse: gelbe Zwiebeln aus dem Vorrat.
+- Schnittlauch gab es nicht tiefgekühlt, deshalb frisch im Bund (wird roh im Kräutertopfen verwendet).
