@@ -14,10 +14,9 @@ When searching and selecting products, follow these rules in order:
 
 When a preferred product is unavailable, check `favorite-products.md` for documented fallbacks before asking the user. Key fallback strategies:
 
-- **Topfen:** If Miil Topfen 20% is out of stock, try these in order:
-  1. Mix: 2x Miil Topfen 40% + 2x Miil Magertopfen (user mixes them to get ~20%)
-  2. Ländle Speisetopfen (reliable fallback, usually in stock)
-  3. Ask the user
+- **Topfen:** Default is nöm Topfen 10% (Miil has no 10%). If out of stock, try these in order:
+  1. Mix: Miil Topfen 20% + Miil Magertopfen 1:1 (user mixes them to get ~10%)
+  2. Ask the user
 - **General rule:** If the first-choice product is unavailable, check if `favorite-products.md` lists a "Fallback" entry for that ingredient before suggesting random alternatives.
 
 ### Smart quantity & variety rules
@@ -32,7 +31,7 @@ When ordering multiple units of the same ingredient category, don't just multipl
 
 Apply these by default unless a recipe specifically requires the premium version:
 
-- **Pasta:** Default to Kitchin Eigenmarke (€0.62/500g) for everyday cooking. Only use Garofalo/Recheis when the dish is pasta-focused (e.g. Aglio e Olio) where pasta quality matters.
+- **Pasta:** Always Kitchin Eigenmarke (€0.58/500g), including pasta-focused dishes. Never Vollkornpasta: the family (Anka, Emi) does not eat it, even in healthy mode.
 - **Spinat for cooking:** Use TK Blattspinat (Alnatura BIO, €3.49/450g = €7.76/kg) instead of fresh BIO Baby Spinat (€2.09/100g = €20.90/kg). Fresh Baby Spinat only for salads where it's eaten raw.
 - **Herbs for cooking:** Use TK herbs (Iglo, 40g ~€2.09) instead of fresh Altschachl (20g €2.29). Fresh herbs only when used as garnish/raw (e.g. fresh Basilikum on pasta, fresh Koriander on curry).
 - **Oatly Barista:** Only for coffee. For cooking/cereal, suggest Yutto BIO Mandeldrink (half the price).
@@ -41,11 +40,22 @@ Apply these by default unless a recipe specifically requires the premium version
 
 ## How It Works
 
-1. User picks dishes from `meals/` (each meal is an .md file with ingredients)
-2. Agent loads `pantry.md` (stuff that's always at home) and `weekly-staples.md` (recurring weekly order)
-3. Agent diffs: what's needed vs. what's at home
-4. Agent calls Gurkerl MCP to search products, using `favorite-products.md` for preferred brands/variants
-5. Agent adds missing items to cart
+1. Agent loads `meal-profile.md` for the active planning mode and household constraints, then `current-week.md` when present
+2. User picks dishes from `meals/` (each meal is an .md file with ingredients)
+3. Agent loads `pantry.md` (stuff that's always at home) and `weekly-staples.md` (recurring weekly order)
+4. Agent diffs: what's needed vs. what's at home
+5. Agent calls Gurkerl MCP to search products, using `favorite-products.md` for preferred brands/variants
+6. Agent adds missing items to cart
+
+### Active healthy profile
+
+`meal-profile.md` currently sets `Modus: healthy`. In automatic planning:
+
+- only use meal files containing the exact metadata `Healthy: ja`
+- never mix in untagged legacy meals unless the user explicitly selects one
+- cook only in the evening on weekdays
+- use six-portion dinners for the family meal plus Mario's and Anka's lunch the next day
+- label lunch as leftovers; never plan a separate cooked lunch
 
 ## First Time Setup
 
@@ -111,6 +121,8 @@ Walk the user through:
 
 ```
 meals/           — one .md file per standard dish (name + ingredients)
+meal-profile.md  — active mode, household size, portions and leftover rules
+current-week.md  — exact selections for the currently planned week
 pantry.md        — always-at-home items (oil, salt, spices, rice, pasta...)
 weekly-staples.md — items ordered every week regardless of meals
 favorite-products.md — preferred Gurkerl products (brand, size, variant)

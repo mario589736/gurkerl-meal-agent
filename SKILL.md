@@ -10,6 +10,8 @@ Load these before executing:
 
 | File | Purpose |
 |---|---|
+| `meal-profile.md` | Active planning mode, household size, portions, lunch and batch-cooking rules. |
+| `current-week.md` | Exact selections and leftover mapping for the currently planned week. Load when present. |
 | `pantry.md` | Items always at home. Never order these. |
 | `weekly-staples.md` | Items to add every week regardless of meal plan. |
 | `favorite-products.md` | Preferred Gurkerl products (brand, size). Use these when searching. |
@@ -26,6 +28,10 @@ User names the meals they want this week. Example:
 Match each name to a file in `meals/`. If no file exists, ask the user for ingredients and offer to create the meal file for next time.
 
 **Auto-plan mode:** If the user says something like "plan my week" or "mach mir einen Wochenplan", the agent can suggest meals automatically:
+- Load `meal-profile.md` first. Its active mode and household rules are binding defaults.
+- If `current-week.md` exists and its status is `geplant`, use those exact selections instead of generating a different plan.
+- When `Modus: healthy`, only meals with the exact metadata `Healthy: ja` are eligible. Do not include or suggest untagged legacy meals unless the user explicitly names one.
+- In the current healthy profile, plan one six-portion dinner per weekday and show lunch on the following day as `Reste von [Vorabend]`. Never schedule a separate cooked lunch.
 - **Weekdays (Mon-Fri):** pick meals tagged `aufwand: niedrig` (quick, easy cooking)
 - **Weekends (Sat-Sun):** pick meals tagged `aufwand: mittel` or `aufwand: hoch` (more complex, fun to cook)
 - Present the plan, let the user swap dishes, then proceed with the shopping list.
@@ -67,12 +73,13 @@ User shares a recipe link (e.g. from a food blog, chefkoch.de, etc.):
 
 1. Fetch the URL and extract: dish name, ingredients with quantities, prep steps
 2. Classify the effort level automatically based on these criteria:
-   - **niedrig:** max 5 ingredients, max 20 min active cooking, one-pot/one-pan, no special techniques
-   - **mittel:** 6-10 ingredients, 20-45 min active cooking, multiple steps but straightforward
-   - **hoch:** 10+ ingredients, 45+ min active cooking, multiple components, special techniques (dough making, slow braising, etc.)
+   - **niedrig:** max 8 main ingredients, max 20 min active cooking, no special techniques; pantry basics and seasonings do not count
+   - **mittel:** 9-12 main ingredients, 20-45 min active cooking, multiple steps but straightforward
+   - **hoch:** 13+ main ingredients, 45+ min active cooking, multiple components, special techniques (dough making, slow braising, etc.)
 3. Present the parsed result to the user for confirmation
 4. Save as a new `.md` file in `meals/` using the standard format
 5. Confirm the Aufwand classification with the user ("Ich würde das als mittel einstufen, passt das?")
+6. Only add `Healthy: ja` after checking the criteria in `meal-profile.md`; never infer the flag merely from the dish name.
 
 ### From pasted text
 
@@ -88,11 +95,13 @@ When classifying Aufwand, consider:
 
 | Factor | niedrig | mittel | hoch |
 |---|---|---|---|
-| Ingredients | max 5 | 6-10 | 10+ |
+| Main ingredients | max 8 | 9-12 | 13+ |
 | Active cooking time | max 20 min | 20-45 min | 45+ min |
-| Steps | 1-3 | 4-6 | 7+ |
+| Steps | 1-6 simple/sequential | 4-8 with coordination | 8+ |
 | Techniques | basic (boil, fry, bake) | moderate (sauce making, marinating) | advanced (dough, braising, multi-component) |
-| Parallel tasks | none | some | requires timing multiple things |
+| Parallel tasks | max 2 simple components | some timing required | requires timing multiple things |
+
+Do not count water, oil, salt, pepper, dried spices or other listed pantry basics as main ingredients. Active effort and coordination matter more than the raw line count in the ingredient list.
 
 If in doubt, round up. Better to be pleasantly surprised than stressed on a Tuesday.
 
@@ -103,6 +112,9 @@ If in doubt, round up. Better to be pleasantly surprised than stressed on a Tues
 - When quantities are ambiguous (e.g. "Zwiebeln" without a count), default to reasonable household quantities (2-3 onions, 1 bunch of herbs, etc.)
 - If a meal file lists an ingredient with a specific quantity, respect it.
 - When creating new meal files, use the same format as existing ones.
+- Respect `meal-profile.md`. In healthy mode, untagged meals are excluded from automatic selection, not deleted.
+- `Portionen: 6` means dinner for the family plus two adult lunches the following day. Keep lunch portions in mind when mapping package quantities.
+- For batch meals, show a short storage/reheating note. Rice must be cooled promptly, used the next day, and reheated no more than once.
 - Keep it conversational. This is a kitchen assistant, not an enterprise tool.
 
 ## Meal File Format
@@ -114,6 +126,10 @@ Each meal file in `meals/` follows this structure:
 
 Portionen: [number]
 Aufwand: [niedrig | mittel | hoch]
+Healthy: [ja | nein]
+Ernährung: [vegetarisch | vegan | omnivor]
+Tags: [comma-separated tags]
+Meal-Prep: [usage, e.g. Abendessen + Mittagessen am Folgetag]
 
 ## Zutaten
 
@@ -125,6 +141,8 @@ Aufwand: [niedrig | mittel | hoch]
 
 Any prep notes, variations, or tips.
 ```
+
+Legacy meal files without `Healthy` remain valid for manual selection. In healthy mode, absence of the flag always means “not eligible”.
 
 ## Example Interaction
 

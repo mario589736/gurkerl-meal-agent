@@ -9,7 +9,8 @@ Bevorzugte Marken und Varianten. Agent soll diese bei der Gurkerl Suche bevorzug
 | Joghurt griechisch | nöm Joghurt griechische Art 10% | 200g | |
 | Joghurt natur | Kärntnermilch BIO Wiesenmilch Joghurt 3,6% | 200g | BIO |
 | Butter | Pinzgau Milch Bergbauern Butter | 250g | |
-| Topfen 20% | Miil Topfen 20% | 250g | Miil, Stammkauf. Fallback: Ländle Speisetopfen, oder Mix aus 40%+Magertopfen |
+| Topfen 10% | nöm Topfen 10% | 250g | Default, Stammkauf. Fallback: Miil Topfen 20% + Miil Magertopfen 1:1 mischen |
+| Topfen 20% | Miil Topfen 20% | 250g | Nur noch als Mischkomponente für 10% |
 | Topfen 40% | Miil Topfen 40% | 250g | Miil. Kann mit Magertopfen gemischt werden für ~20% |
 | Magertopfen | Miil Magertopfen | 250g | Miil. Kann mit 40% gemischt werden für ~20% |
 | Topfen Fallback | Ländle Speisetopfen | 250g | Fallback wenn alle Miil Topfen out of stock |
@@ -17,7 +18,7 @@ Bevorzugte Marken und Varianten. Agent soll diese bei der Gurkerl Suche bevorzug
 | Joghurt natur groß | Miil BIO Joghurt Natur 3,8% | 400g | BIO, Stammkauf |
 | Skyr | Alnatura BIO Skyr | 400g | BIO |
 | Crème Fraîche | Schärdinger Creme Fraiche Natur | 125g | |
-| Frischkäse | Miil Frischkäse | 200g | Miil |
+| Frischkäse | Miil Frischkäse | 200g | Miil. Woerle BIO Frischkäse natur bevorzugen, falls bei Gurkerl verfügbar (Stand Nov 2026: nur Kräuter-Variante) |
 | Mozzarella | Schärdinger Mozzarella 45% | 125g | |
 | Grana Padano | Miil Grana Padano DOP 16 Monate gereift | 200g | Miil |
 | Parmigiano Reggiano | Miil Parmigiano Reggiano DOP 24 Monate gereift | 200g | Miil |
@@ -41,7 +42,6 @@ Bevorzugte Marken und Varianten. Agent soll diese bei der Gurkerl Suche bevorzug
 | Spinat (Salat/roh) | BIO Baby Spinat | 100g | BIO, nur für Salate |
 | Spinat (kochen) | Alnatura BIO Blattspinat (tiefgekühlt) | 450g | BIO, TK, Default zum Kochen |
 | Lauch/Porree | BIO Porree, 1 Stk. | 1 Stk | BIO |
-| Champignons | BIO Champignon creme | 200g | BIO, Stammkauf |
 | Suppengrün | BIO Suppengrün | 350g | BIO |
 | Salatgurke | BIO Salatgurke | 1 Stk | BIO, Stammkauf |
 | Gurken klein | Mini Gurken | 300g | |
@@ -56,7 +56,8 @@ Bevorzugte Marken und Varianten. Agent soll diese bei der Gurkerl Suche bevorzug
 | Zwiebel | Kraftladen's BIO Zwiebel Gelb im Netz | 1 kg | BIO |
 | Romanasalat | Romanasalat | 1 Stk | |
 | Pimientos de Padrón | Pimientos de Padrón | 200g | |
-| Zuckermais | BIO Zuckermais vorgegart | 400g | BIO |
+| Zuckermais (Kolben) | BIO Zuckermais vorgegart | 400g | BIO. Ganze Kolben, nur wenn Kolben gewünscht |
+| Mais (Körner, Dose) | Alnatura BIO Mais | 340g | BIO. Default wenn Rezept "Dose Mais" sagt |
 | Sauerkraut | Efko BIO Sauerkraut | 500g | BIO |
 
 ## Fleisch
@@ -83,10 +84,9 @@ Bevorzugte Marken und Varianten. Agent soll diese bei der Gurkerl Suche bevorzug
 |---|---|---|---|
 | Oliven | Alnatura BIO Kalamata Oliven o. Stein | 350g | BIO |
 | Käferbohnen | Steirerkraft Käferbohnen g.U. | 400g | |
-| Weiße Bohnen | Alnatura BIO Weiße Bohnen | 400g | BIO |
 | Kichererbsen | Morgentau BIO Kichererbsen, gegart | 350g | BIO, Stammkauf |
-| Kidney Bohnen | Morgentau BIO Red Kidney Bohnen, gegart | 350g | BIO |
-| Weiße Bohnen | Morgentau BIO Weiße Bohnen, gegart | 350g | BIO |
+| Kidney Bohnen | Alnatura BIO Kidney Bohnen | 400g | BIO, Default (günstiger als Morgentau 350g) |
+| Weiße Bohnen | Alnatura BIO Weiße Bohnen | 400g | BIO, Default (günstiger als Morgentau 350g) |
 | Linsen | Morgentau BIO Linsen, gegart | 350g | BIO |
 | Ketchup | Blün Ketchup | 280g | |
 | Tomatenmark | Kitchin 3-fach konzentriertes Tomatenmark | 200g | |
@@ -101,9 +101,9 @@ Bevorzugte Marken und Varianten. Agent soll diese bei der Gurkerl Suche bevorzug
 | Koriander (kochen) | Iglo Koriander (tiefgekühlt) | 40g | TK, Default zum Kochen |
 | Basilikum (frisch/Garnish) | Altschachl Basilikum | 20g | Nur wenn roh/als Garnish |
 | Basilikum (kochen) | Iglo Basilikum (tiefgekühlt) | 50g | TK, Default zum Kochen |
-| Spaghetti Premium | Garofalo Spaghetti | 500g | Nur für pastafokussierte Gerichte (Aglio e Olio etc.) |
-| Spaghetti | Kitchin Spaghetti #No.5 | 500g | Standard/Default |
-| Linguine | Kitchin Linguine #No.13 | 500g | Standard/Default |
+| Spaghetti Premium | Garofalo Spaghetti | 500g | Nicht mehr verwenden, immer Kitchin |
+| Spaghetti | Kitchin Spaghetti #No.5 | 500g | Immer. Kein Vollkorn |
+| Linguine | Kitchin Linguine #No.13 | 500g | Immer. Kein Vollkorn |
 | Farfalle | Kitchin Farfalle #No.154 | 500g | Standard/Default |
 | Hörnchen | Recheis Goldmarke Hörnchen | 500g | |
 | Gnocchi | Rana Gnocchi di Patate | 400g | Premium (€15.95/kg) |
@@ -120,6 +120,7 @@ Bevorzugte Marken und Varianten. Agent soll diese bei der Gurkerl Suche bevorzug
 |---|---|---|---|
 | Weizen Toast | Yutto Weizen Toast | 500g | |
 | Vollkorn Toast | Yutto Vollkorn Toast | 500g | |
+| Vollkornbrot | Alnatura BIO Roggen Vollkorn Brot | 500g | BIO, verpackt, lange haltbar, Default |
 
 ## Nüsse & Trockenfrüchte
 

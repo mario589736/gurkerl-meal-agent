@@ -1,17 +1,23 @@
-# Lachs mit Brokkoli
+# Brokkoli-Lachs-Auflauf
 
 Portionen: 2
 Aufwand: niedrig
+Quelle: https://www.schwarzgrueneszebra.de/low-carb-rezepte/brokkoli-lachs-auflauf
 
 ## Zutaten
 
-- 2 Lachsfilets
-- 1 Brokkoli
-- 2 Knoblauchzehen
-- 1 Zitrone
-- 2 EL Olivenöl
-- 50g Parmesan
+- 600g Brokkoli (TK)
+- 300g Lachs (TK)
+- 200g Schmand
+- 50g Reibekäse
+- Schnittlauch (ersetzt Dill im Originalrezept)
+- Salz, Pfeffer, Knoblauchpulver
+- Olivenöl
 
 ## Notizen
 
-Lachs im Ofen bei 200°C, 15 Min. Brokkoli nur blanchieren, nicht totkochen.
+TK-Brokkoliröschen direkt gefroren in die Auflaufform.
+Schmand mit Salz, Pfeffer, Schnittlauch und Knoblauchpulver würzen, unter den Brokkoli mischen.
+Reibekäse drüber streuen.
+Lachsstücke drauflegen, mit Öl bestreichen, Schnittlauch drüber.
+180°C Umluft, ca. 30 Min. Alles gart aus dem gefrorenen Zustand.

@@ -8,10 +8,14 @@ Pick your meals for the week. The agent figures out what to buy.
 2. You have a pantry list (`pantry.md`) of stuff that's always at home
 3. You have weekly staples (`weekly-staples.md`) that get ordered every time
 4. You have favorite Gurkerl products (`favorite-products.md`) so the agent picks the right brands
+5. You have an active planning profile (`meal-profile.md`) that controls eligibility, portions and leftover lunches
+6. An optional `current-week.md` locks the exact meals for the week instead of asking the agent to generate new ones
 
 You tell the agent what you want to eat this week. It diffs, maps to Gurkerl products, and fills your cart.
 
 Each meal has an `Aufwand` tag (niedrig/mittel/hoch). Ask the agent to "plan my week" and it picks easy meals for weekdays, more complex ones for weekends.
+
+The current profile is `healthy`: only meals carrying `Healthy: ja` participate in automatic planning. Weekday dinners make six portions, and the next day's lunch is always leftovers rather than a separately cooked meal. Legacy dishes remain available when explicitly requested.
 
 ## Setup
 
@@ -113,6 +117,8 @@ meals/                    — one file per dish
 pantry.md                 — always at home, never order
 weekly-staples.md         — order every week
 favorite-products.md      — preferred brands at Gurkerl
+meal-profile.md           — active mode, household portions and lunch/batch rules
+current-week.md           — exact meal selections for the current week
 SKILL.md                  — Claude Code skill definition
 CLAUDE.md                 — project instructions
 ```
@@ -140,6 +146,10 @@ The `CLAUDE.md` and `SKILL.md` are optimized for Claude Code, but the data files
 
 Portionen: 2
 Aufwand: niedrig | mittel | hoch
+Healthy: ja | nein
+Ernährung: vegetarisch | vegan | omnivor
+Tags: healthy, vegetarisch, batch-cooking
+Meal-Prep: Abendessen + Mittagessen am Folgetag
 
 ## Zutaten
 
@@ -151,7 +161,7 @@ Aufwand: niedrig | mittel | hoch
 Prep tips.
 ```
 
-Effort levels: **niedrig** (max 5 ingredients, 20 min, one-pot), **mittel** (6-10 ingredients, 20-45 min), **hoch** (10+ ingredients, 45+ min, multi-component).
+Effort levels count main ingredients, not water, oil or pantry seasonings: **niedrig** (up to 8 main ingredients and 20 minutes active work), **mittel** (9-12 and 20-45 minutes), **hoch** (13+, 45+ minutes or advanced multi-component cooking).
 
 ## License
 
